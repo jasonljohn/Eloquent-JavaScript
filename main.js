@@ -1,10 +1,15 @@
-function displayPyramid(n) {
-    let str = "#";
-    for (var i = 0; i < n; i++) {
-      for (var j = 0; j < i+1; j++) {
-        document.write(str);
-      }
-      document.write("<br>");
+for (let i=1; i <= 100; i++) {
+    let key;
+    if(i%3 == 0 && i%5 == 0){
+        key= 'FizzBuzz';
+        console.log(key);
+    } else if (i%5 == 0){
+        key = 'Buzz';
+        console.log(key);
+    } else if (i%3 == 0){
+        key = 'Fizz';
+        console.log(key);
+    } else {
+        console.log(i);
     }
-  }
-  displayPyramid(7);
+}

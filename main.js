@@ -1,15 +1,23 @@
-for (let i=1; i <= 100; i++) {
-    let key;
-    if(i%3 == 0 && i%5 == 0){
-        key= 'FizzBuzz';
-        console.log(key);
-    } else if (i%5 == 0){
-        key = 'Buzz';
-        console.log(key);
-    } else if (i%3 == 0){
-        key = 'Fizz';
-        console.log(key);
-    } else {
-        console.log(i);
+function chessboard(n) {
+    let i,j;
+    let board = "";
+        for (i=0;i<n;i++){
+            for (j=0;j<n;j++){
+                if ((i+j)%2 == 0){
+                    //document.write(" ");
+                    //console.log(" ");
+                    board += " ";
+                } else {
+                    //document.write("#");
+                    //console.log("#");
+                    board += "#";
+                }
+            }
+            //console.log("\n");
+            //document.write("<br >");
+            board += "\n";
+        }
+        console.log(board);
+        //document.write(board);
     }
-}
+chessboard(8);

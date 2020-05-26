@@ -1,14 +1,23 @@
-function isEven(num){
-    if (num == 0 ){
-        return true;
-    } else if (num == 1 || num < 0){
-        return false;
+function countBs(s) {
+    let count = 0;
+    for (let i=0; i<s.length; i++){
+        if(s.charAt(i) === "B"){
+            count++;
+        }
     }
-    else 
-    {
-        num = num - 2;
-        return isEven(num);
-    } 
+    return count;
 }
 
-console.log("the number entered is even number "+ isEven(12));
+console.log(countBs("BasketBall"));
+
+function countBs(s,c) {
+    let count = 0;
+    for (let i=0; i<s.length; i++){
+        if(s.charAt(i) === c){
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countBs("characters","c"));
